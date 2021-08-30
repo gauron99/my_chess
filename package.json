@@ -1,0 +1,22 @@
+{
+  "name": "my_chess_game",
+  "version": "1.0.0",
+  "description": "Clasic chess game and who knows what",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gauron99/my_chess"
+  },
+  "author": "David Fridrich",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9"
+  }
+}
