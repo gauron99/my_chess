@@ -1,22 +1,21 @@
 {
-  "name": "my_chess_game",
+  "name": "my_chess",
   "version": "1.0.0",
-  "description": "Clasic chess game and who knows what",
-  "main": "index.js",
+  "description": "Chess game and stuff",
+  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "@echo test not rdy",
+    "build": "tsc",
+    "start": "nodemon /build/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gauron99/my_chess"
+    "url": "git+https://github.com/gauron99/my_chess.git"
   },
-  "author": "David Fridrich",
+  "author": "gauron99",
   "license": "ISC",
-  "dependencies": {
-    "react": "^17.0.2"
+  "bugs": {
+    "url": "https://github.com/gauron99/my_chess/issues"
   },
-  "devDependencies": {
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9"
-  }
+  "homepage": "https://github.com/gauron99/my_chess#readme"
 }
