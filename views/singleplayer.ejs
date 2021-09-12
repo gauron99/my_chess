@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chess for fellas</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+
+<body>
+  <div class=header>
+    <button class="back-button bttn" onclick="location.href='index'">Back</button>
+    <h1>single lapayer big time!</h1>
+  </div>
+
+  <div class=row>
+    <div class=column>
+      <label for="mode">GAME MODE</label>
+      <select id="mode" name="mode">
+        <option value="standard">Standard</option>
+        <option value="chess960">Chess960</option>
+      </select>
+    </div>
+    <span>
+    <div class=column>
+      <label for="versus">VERSUS</label>
+      <select id="vs" name="versus">
+        <option value="friend">Friend</option>
+        <option value="ai_jj">AI: Johny Jones</option>
+      </select>
+    </div>
+  </div>
+    
+    <button class="bttn standard-button" onclick="location.href='game'">PLAY!</button>
+    <button class="bttn standard-button" id="btn-la">Lalala</button>
+  <hr class=line>
+  <h2>History which shall repeat</h2>
+
+
+  <!-- scripts -->
+  <!-- <script>var exports = {};</script> -->
+  <!-- <script>console.log("ellou")</script> -->
+  <script type="text/javascript" src="js/singleplayer.js"></script>
+</body>
+</html>

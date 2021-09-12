@@ -1,0 +1,89 @@
+
+:root {
+  --prim-bg-color-light: #9CD5F2;
+  --primary-bg-color: #5AB9EA;
+  --secondary-bg-color:#1799DA;
+  --button-color: #5680E9;
+  --dark-bg: #25274D;
+}
+
+h1,h2 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: var(--prim-bg-color-light);
+}
+
+p {
+  font: 20px 'Lucida Console',Monospace;
+}
+
+select {
+  display: inline-block;
+  padding: 5px 5px;
+  border: none;
+  background-color:var(--prim-bg-color-light);
+}
+
+select, label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* buttons on the main page */
+.standard-button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 7px;
+
+}
+/* config for back button on top left */
+.back-button {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;  
+
+  /* because of .header's position is relative, this is for the button to be set on the side and the same line as <h1> */
+  position: absolute;
+  right: 0;
+}
+
+/* standard info for a button */
+.bttn {
+  background-color: var(--button-color);
+  color:#001232;
+  font-weight: bold;
+}
+
+.column{
+  background-color: var(--secondary-bg-color);/*DEBUG*/
+  float: left;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.row {
+  width: 100%;
+}
+
+.row:after{
+  content: ""; 
+  visibility: hidden; 
+  display: table; 
+  clear: both;
+}
+
+.line {
+  height: 5px;
+  background-color: var(--dark-bg);
+}
