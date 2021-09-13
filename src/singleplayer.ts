@@ -1,7 +1,6 @@
 // select variables
 var mode = '';
 var versus = '';
-console.log("Hello, singleplayer JS");
 
 var mode_sel = document.getElementById("mode") as HTMLSelectElement;
 if (mode_sel !== null){
@@ -22,18 +21,8 @@ const sp_settings = {
   vs: versus,
 }
 
-var b = document.getElementById("btn-la");
-if(b!==null){
-  b.addEventListener("click",random);
-}
-
-function random() {
-  console.log("hello");
-  var a = document.getElementById("btn-la");
-  if (a!==null){
-    a.textContent = "nope";
-  }
-
+function onLoad() {
+  console.log("yoyooooooooooo");
 }
 
 export default sp_settings;
