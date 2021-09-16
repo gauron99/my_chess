@@ -7,10 +7,8 @@
     "test": "@echo test not rdy",
     "build": "tsc",
     "build-watch": "tsc --watch",
-    "build-copy": "tsc && npm run copy-statics",
     "start": "nodemon ./build/server.js",
-    "prestart": "npm run build",
-    "copy-statics": "ts-node copyStatics.ts"
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -30,7 +28,6 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "shelljs": "^0.8.4",
     "ts-node": "^10.2.1"
   }
 }

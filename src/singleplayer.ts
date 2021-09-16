@@ -1,28 +1,45 @@
-// select variables
-var mode = '';
-var versus = '';
+let sp_settings = {
+  mode: '',
+  vs: '',
+}
 
-var mode_sel = document.getElementById("mode") as HTMLSelectElement;
-if (mode_sel !== null){
-  mode = mode_sel.options[mode_sel.selectedIndex].value;
+let mode_sel = document.getElementById("mode") as HTMLSelectElement;
+let versus_sel = document.getElementById("vs") as HTMLSelectElement;
+
+// if theres already settings in local storage, use it
+const tmpStr = localStorage.getItem('settings');
+if(tmpStr !== null){
+  sp_settings = JSON.parse(tmpStr);
+  mode_sel.value = sp_settings.mode;
+  versus_sel.value = sp_settings.vs;
 } else {
-  throw Error("element by ID - 'mode' is null");
-}
-var versus_sel = document.getElementById("vs") as HTMLSelectElement;
-if (versus_sel !== null){
-  versus = versus_sel.options[versus_sel.selectedIndex].value;
-} else {
-  throw Error("element by ID - 'vs' is null");
-}
-console.log('mode:',mode,';;','vs:',versus);
 
-const sp_settings = {
-  mode: mode,
-  vs: versus,
+  if (mode_sel !== null){
+    sp_settings.mode = mode_sel.value;
+  } else {
+    throw Error("element by ID - 'mode' is null");
+  }
+  if (versus_sel !== null){
+    sp_settings.vs = versus_sel.value; 
+  } else {
+    throw Error("element by ID - 'vs' is null");
+  }
 }
 
-function onLoad() {
-  console.log("yoyooooooooooo");
-}
+console.log('init:',sp_settings);
 
-export default sp_settings;
+// add event listener for selects "mode" & "vs"
+mode_sel.addEventListener("change", () => {
+  sp_settings.mode = mode_sel.value;
+  localStorage.setItem('settings',JSON.stringify(sp_settings));
+  console.log('changed:',sp_settings);
+});
+
+versus_sel.addEventListener("change", () => {
+  sp_settings.vs = versus_sel.value;
+  localStorage.setItem('settings',JSON.stringify(sp_settings));
+  console.log('changed:',sp_settings);
+});
+
+// default -- save settings to local storage to be retrieved later
+localStorage.setItem('settings',JSON.stringify(sp_settings));

@@ -1,5 +1,5 @@
 :root {
-  --prim-bg-color-light: #9CD5F2;
+  --primary-bg-color-light: #9CD5F2;
   --primary-bg-color: #5AB9EA;
   --secondary-bg-color:#1799DA;
   --button-color: #5680E9;
@@ -7,18 +7,39 @@
 }
 
 body {
-  background-color: var(--prim-bg-color-light);
+  background-color: var(--primary-bg-color-light);
+  min-width: 755px;
 }
 
-.board{
-
+.board {
+  display: flex;
+  height: 20cm;
+  justify-content: center;
+  flex-flow: row wrap;
+  /* margin: auto; */
 }
 
-.black{
-
+.row {
+  display: flex;
+  height: 12.5%; /*12.5*8 = 100 -> 8 rows*/
+  width: 20cm;
 }
 
-.white{
-
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 12.5%;
+  height: 100%;
+  /* margin: auto; */
 }
 
+/* change to LIGHT/DARK for different color shades and what not */
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}

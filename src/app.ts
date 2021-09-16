@@ -19,6 +19,10 @@ if (process.argv.length === 3){
 	app.set('port',3333); 
 }
 
+// body parser for post methods (body-parser itself is depricated)
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
 //__dirname is where this gets run from, which is the .js in /build
 
 // ---------- static files ---------- \\
@@ -41,6 +45,14 @@ app.get('/index',(req: express.Request,res: express.Response) => {
 
 app.get('/singleplayer',(req: express.Request,res: express.Response) => {
 	res.render('singleplayer');
+});
+
+app.post('/singleplayer',(req: express.Request,res: express.Response) => {
+	// const data = sp_settings;
+	console.log("yello send POST baby");
+	var data = req.body;
+
+	res.redirect('/index');
 });
 
 app.get('/game',(req: express.Request,res: express.Response) => {

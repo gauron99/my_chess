@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 
-<body onload="onLoad()">
+<body>
   <div class=header>
     <button class="back-button bttn" onclick="location.href='index'">Back</button>
     <h1>single lapayer big time!</h1>
@@ -30,16 +30,22 @@
       </select>
     </div>
   </div>
-    
-    <button class="bttn standard-button" onclick="location.href='game'">PLAY!</button>
-    <button class="bttn standard-button" id="btn-la">Lalala</button>
+      <button class="bttn standard-button" onclick="location.href='game'">PLAY!</button>
   <hr class=line>
   <h2>History which shall repeat</h2>
 
 
-  <!-- scripts -->
-  <!-- <script>var exports = {};</script> -->
-  <!-- <script>console.log("ellou")</script> -->
-  <script type="text/javascript" src="js/singleplayer.js" defer></script>
+  <!------------------------- scripts ------------------------->
+
+  <!-- this is for commonjs issue, where an error such as: 
+    "Uncaught ReferenceError: exports is not defined at..." will occur.
+  I tried to fix this by using umd but that screws up with functions & scripts,
+  like i cant reference a function declared in .js because the function is not seen
+  by the (html/web/idk what to call it) -- just gives an error of:
+  "Uncaught ReferenceError: <function name> is not defined at..." THEREFORE
+  using commonjs with es2017 module & using this line to cover 'exports' as a solution.
+  --here! "https://stackoverflow.com/questions/43042889/typescript-referenceerror-exports-is-not-defined" -->
+  <script>var exports = {};</script> 
+  <script type="text/javascript" src="js/singleplayer.js"></script>
 </body>
 </html>
