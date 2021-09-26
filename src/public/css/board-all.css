@@ -36,10 +36,11 @@ body {
 }
 
 /* change to LIGHT/DARK for different color shades and what not */
-.white {
-  background-color: white;
+.light {
+  background-color: #ABC2F0;
 }
 
-.black {
-  background-color: black;
+.dark {
+  background-color: #496BAE;
 }
+
